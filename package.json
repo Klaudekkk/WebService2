@@ -1,0 +1,41 @@
+{
+  "name": "WebService",
+  "packageManager": "yarn@3.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon src/index.js",
+    "test-api": "cross-env NODE_ENV=test nodemon src/index.js",
+    "tests": "cross-env NODE_ENV=test NODE_OPTIONS=--experimental-vm-modules jest --detectOpenHandles --maxWorkers=1 --watch",
+    "prepare": "husky install",
+    "lint": "eslint src"
+  },
+  "jest": {
+    "transform": {}
+  },
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "config": "^3.3.6",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "express-rate-limit": "^6.0.5",
+    "helmet": "^5.0.1",
+    "jest": "^27.4.7",
+    "lodash": "^4.17.21",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.15",
+    "promisify": "^0.0.3",
+    "sequelize": "^6.12.0-beta.1"
+  },
+  "devDependencies": {
+    "axios": "^0.24.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^8.3.0",
+    "eslint-config-prettier": "^8.3.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.2",
+    "prettier": "^2.5.0",
+    "sequelize-cli": "^6.3.0"
+  }
+}
