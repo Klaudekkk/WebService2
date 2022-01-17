@@ -13,7 +13,9 @@ export const getAllMenu = async (req, res) => {
 
 export const postMenu = async (req, res) => {
     const { body } = req;
+
     const { id, name} = body || {};
+    console.log("req tu jesss: "+id + name);
 
     try {
         await MenuService.create(id, name);
@@ -23,6 +25,7 @@ export const postMenu = async (req, res) => {
     }
 
     return res.send();
+    console.log("req tu jesss: "+req);
 };
 
 export const deleteMenu = async (req, res) => {

@@ -1,7 +1,7 @@
 import { Sequelize } from "sequelize";
 import databaseProvider from "../DatabaseProvider.js";
 
-const MODEL_NAME = "menu";
+const MODEL_NAME = "menus";
 
 databaseProvider.defineModel(
     MODEL_NAME,
